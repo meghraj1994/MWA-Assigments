@@ -3,3 +3,4 @@ module.exports = function fibonacci(Enternum) {
   if (num <= 1) return num;
   return fibonacci(num - 1) + fibonacci(num - 2);
 };
+
