@@ -4,7 +4,7 @@ const multFunction = function (req, res) {
   let queryNum = req.query.num;
   let multiplication = paramNum * queryNum;
   console.log(multiplication);
-  res.status(200).json(multiplication);
+  res.status(200).send({ 'Multiplication of numbers is': multiplication });
 };
 
 module.exports = {
