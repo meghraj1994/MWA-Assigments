@@ -1,17 +1,16 @@
 {
-  "name": "mean-games",
+  "name": "problem2",
   "version": "1.0.0",
-  "description": "Mean Games",
+  "description": "Multiply two numbers",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "Node",
-    "NPM"
+    "npm",
+    "node"
   ],
-  "author": "Meghraj",
+  "author": "meghraj",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^10.0.0",
