@@ -13,9 +13,10 @@
   "author": "Meghraj",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "mongodb": "^4.1.2",
-    "mongoose": "^6.0.8"
+    "mongoose": "^6.0.9"
   }
 }

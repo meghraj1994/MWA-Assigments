@@ -64,26 +64,27 @@ const oneGame = function (req, res) {
 
 //adding game
 const gamesAddOne = function (req, res) {
-  Games.create(
-    {
-      title: req.body.title,
-      year: parseInt(req.body.year),
-      price: parseFloat(req.body.price),
-      designer: req.body.designer,
-      minPlayers: parseInt(req.body.minPlayers),
-      maxPlayers: parseInt(req.body.maxPlayers),
-      rate: parseFloat(req.body.rate || 1),
-    },
-    function (err, game) {
-      if (err) {
-        console.log('Error creating games');
-        res.status(400).json(err);
-      } else {
-        console.log('Game created', game);
-        res.status(201).json(game);
-      }
+  // const newGame = {
+  //   title: req.body.title,
+  //   year: parseInt(req.body.year),
+  //   price: parseFloat(req.body.price),
+  //   designer: req.body.designer,
+  //   minPlayers: parseInt(req.body.minPlayers),
+  //   maxPlayers: parseInt(req.body.maxPlayers),
+  //   rate: parseFloat(req.body.rate || 1),
+  // };
+  console.log(req.body.title); 
+  res.send('sdfd');
+  return;
+  Games.create(newGame, function (err, game) {
+    if (err) {
+      console.log('Error creating games');
+      res.status(400).json(err);
+    } else {
+      console.log('Game created', game);
+      res.status(201).json(game);
     }
-  );
+  });
 };
 
 //updating game
@@ -103,7 +104,6 @@ const gameUpdateOne = function (req, res) {
           (game.designer = req.body.designer);
         game.rate = parseFloat(req.body.rate);
         game.save(function (err, updateGame) {
-         
           if (err) {
             res.status(500).json({ message: ' server error', err });
           } else {

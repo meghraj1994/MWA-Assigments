@@ -13,6 +13,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json({ extended: false }));
 
+// var bodyParser = require('body-parser');
+
 //loading config file
 dotenv.config({ path: './config/config.env' });
 
