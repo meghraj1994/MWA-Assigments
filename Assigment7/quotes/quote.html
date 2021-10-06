@@ -1,6 +1,5 @@
 <ul>
-  <li ng-repeat="quote" in quoteCtrl.quotes>
-    {{quote.sentence}} <br />
-    {{quote.character}} <br />
+  <li ng-repeat="quote in quoteCtrl.quotes">
+    Sentence: {{quote.sentence}}, Character: {{quote.character}}
   </li>
 </ul>

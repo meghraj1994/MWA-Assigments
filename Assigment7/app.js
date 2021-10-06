@@ -12,7 +12,12 @@ function config($routeProvider) {
       templateUrl: 'about/about.html',
       controller: 'AboutController',
       controllerAs: 'aboutCtrl',
-    }).when()
+    })
+    .when('/quotes/', {
+      templateUrl: 'quotes/quote.html',
+      controller: 'QuoteController',
+      controllerAs: 'quoteCtrl',
+    })
     .otherwise({
       redirectTo: '/',
     });

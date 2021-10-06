@@ -1,10 +1,10 @@
-function QuoteController($routeParams, QuoteFactory) {
+angular
+  .module('myControllerApp')
+  .controller('QuoteController', QuoteController);
+function QuoteController(QuoteFactory) {
   const vm = this;
-//   const quoteType = $routeParams.quoteType;
-//   JokeFactory.getOneJoke(quoteType).then(function (response) {
-//     vm.quote = response[0];
-//   });
-function QuoteFactory() {
-    
-} 
+
+  QuoteFactory.getTenQuote().then(function (response) {
+    vm.quotes = response;
+  });
 }
