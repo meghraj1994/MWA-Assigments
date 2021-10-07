@@ -1,0 +1,7 @@
+<h2><p>{{vm.title}}</p></h2>
+
+<ul>
+  <li ng-repeat="team in vm.teams">
+    <a href="#/team/{{team._id}}">{{team.teamName}}</a>
+  </li>
+</ul>
